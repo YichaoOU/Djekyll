@@ -1,0 +1,171 @@
+#content {
+  margin-top: -5px; /* peek under header */
+  margin-left: 200px;
+  
+  padding-top: 20px;
+}
+
+
+
+/* Hide the date ribbon, and so also fix the left offset of center alignments. */
+.article .article-header .date {
+  display: none;
+}
+
+
+
+.article {
+  font-size: 14px;
+  margin-left: 20px;
+  
+  max-width: 850px;
+  position: relative;
+  word-wrap: break-word;
+}
+
+/* Post Header */
+
+.article .article-header {
+  display: table;
+  text-align: center;
+  width: 100%;
+}
+
+.article .article-header .title {
+  font-size: 20px;
+  font-family: 'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  padding-right: 20px; /* Compensate for ribbon, to stay centered. */
+}
+
+.article .title .edit {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAA+UlEQVR42s3U2QmDQBAG4JRgKZbio4qieIAniniiYgkpwRIsISVYQkqwhMlMiHkIhITNhGRgYNeHz/1xncPhn0pV1dkwjNW2bYkNRAzCMIQ4jj+HdzBJEmiaBtq2hSzLxOFHcBgGGMcRuq4Tg5+Be9/gmQ2kxmdrnucSG9j3/TxNEy/IGvl3oKIokqZpC+sJdV1fHceBNE2vl5oDlC3LInBjAakw9tF13TPeNRljbwh8BlKZpnnGAXGkdRRFclEUd1gIpOj0cQijPa6VIAhOdV2LgXt03/cBoy8Ib57n0QvWsixz4XFG0XEuQlVVC8a23/6HX6A80DfrAlIMSJorw8fYAAAAAElFTkSuQmCC);
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+  display: inline-block;
+  height: 21px;
+  opacity: 0.8;
+  position: relative;
+  top: 3px;
+  width: 21px;
+}
+
+.article .title .edit:hover {
+  opacity: 1;
+}
+
+.article .article-header .date {
+  float: left;
+  left: 0px;
+  margin: 0px 5px 5px 0px;
+  position: relative;
+  top: 5px;
+}
+
+/* Post Content */
+
+.article .article-content {
+  clear: both;
+  color: rgba(51, 51, 51, 1);
+  line-height: 1.4;
+  margin-top: 10px;
+  margin: 10px auto 5px auto;
+  text-align: justify;
+}
+
+/* This shouldn't really be added at all... it is from feeds. */
+.article .article-content .blogger-post-footer {
+  display: none;
+}
+
+/* Restore a lot of the styles we reset globally. */
+.article-content ol {
+  list-style-type: decimal;
+  margin: 0.5em 0;
+  padding-left: 2em;
+}
+.article-content ul {
+  list-style-type: disc;
+  margin: 0.5em 0;
+  padding-left: 2em;
+}
+
+.article-content p {
+  margin: 1em 0;
+}
+
+/* Defaults from: http://www.w3.org/TR/CSS2/sample.html */
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6 {
+  font-weight: bolder;
+}
+.article-content h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+.article-content h2 {
+  font-size: 1.5em;
+  margin: .75em 0;
+}
+.article-content h3 {
+  font-size: 1.17em;
+  margin: .83em 0;
+}
+.article-content h4 {
+  margin: 1.12em 0;
+}
+.article-content h5 {
+  font-size: .83em;
+  margin: 1.5em 0;
+}
+.article-content h6 {
+  font-size: .75em;
+  margin: 1.67em 0;
+}
+
+.article .article-content a {
+  display: inline;
+}
+
+.article .article-content img {
+  -moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+-o-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+  display: inline-block;
+  height: auto;
+  margin: 10px auto; /* Attempt to horizontally center. */
+  /* For Sally-Anne. Keep images to the width of the post. */
+  /* It's needed to avoid IE because of b/5420328 */
+  
+  max-width: 100%;
+  
+}
+
+
+/* Center all images/videos in posts. */
+.article .article-content iframe,
+.article .article-content embed {
+  display: block;
+  margin: 10px auto; /* Attempt to horizontally center. */
+  /* It's needed to avoid IE because of b/5420328 */
+  
+  max-width: 100%;
+  
+}
+
+body, input, textarea {
+  font-family: 'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+

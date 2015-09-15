@@ -1,0 +1,87 @@
+{% load staticfiles %}
+
+<html>
+
+<head>
+<title>{{ title }}</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}"/>
+<link rel="stylesheet" type="text/css" href= "{% static 'css/sidebar.css' %}"/>
+<link rel="stylesheet" type="text/css" href= "{% static "css/content.css" %}"/>
+{% block css %}{% endblock %}
+
+</head>
+
+<body class="liyc-body">
+<header>
+<!-- ==============			header		=================== -->
+<div id="header-container">
+  <div id="header" class="header">
+    <div class="header-bar">
+	
+	
+     <span class="title"><center><h1>Unfashionable's blog</h1></center></span>
+	   <div class="header-drawer sticky open">
+      
+  
+<!--         <div id="pages" class="tabs">
+                <li class="Classic"><a class="menu-item " href="http://www.ohio.edu/people/yl079811/ideas/top_featured/index.html" target="_self">Top featured</a> &#x25BC;</li>
+        </div>  
+        <div id="pages" class="tabs">
+                <li class="Classic"><a class="menu-item " href="#" target="_self">Population Genetics</a></li>
+        </div>  
+        <div id="pages" class="tabs">
+                <li class="Classic"><a class="menu-item " href="#" target="_self">Regulatory Genomics</a></li>
+        </div>  
+ -->	{% autoescape off %}	
+		{{ header_tabs }}
+		{% endautoescape %}
+	  </div>  
+	</div>
+  </div>
+</div>			
+<!-- ==============			main		=================== -->
+<div id="main" class="hfeed" tabindex={{ current_tab }}>
+<!-- ==============			side bar		=================== -->
+  <div id="sidebar" style="top: 100px;">
+    <div class="items">
+	
+<!-- 	  <div class="item hentry selected">
+		<img class="thumbnail" src="./pic/c_interval.gif" style="width: 30px; height: 30px;">
+		<h3 class="title entry-title">
+			<a href="#">Confidence Interval Motif</a>   
+		</h3>
+      </div>
+	
+	  <div class="item hentry">
+		<img class="thumbnail" src="./pic/circos-thumb.png" style="width: 30px; height: 30px;">
+		<h3 class="title entry-title">
+			<a href="./top_featured/1.html">Motif Circos View</a>   
+		</h3>
+      </div>
+ -->
+		{% autoescape off %}
+		{{ sidebar_menu }}
+		{% endautoescape %}
+    </div>
+  </div>
+
+
+</header>
+
+<!-- ==============			content		=================== -->
+  <div id="content"><div class="article hentry">
+ {% autoescape off %}
+ {{post}}
+ {% endautoescape %}
+  </div></div>
+
+
+</body>
+
+
+
+
+
+
+</html>
+
